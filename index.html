@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive rating component | FrontEndMentor</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <script src="/scripts/script.js" defer></script>
+    <!-- sass --watch styles/style.scss:styles/style.css -->
+</head>
+
+<body>
+
+    <div class="box-front">
+        <div class="contain front">
+            <ion-icon name="star"></ion-icon>
+            <div class="box--texts">
+                <h1>How did we do?</h1>
+                <p>
+                    Please let us know how we did with your support request. All feedback is appreciated
+                    to help us improve our offering!
+                </p>
+            </div>
+            <div class="numbers">
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button value="4">4</button>
+                <button value="5">5</button>
+            </div>
+            <button class="btnSubmit" disabled>SUBMIT</button>
+        </div>
+        <div class="contain back" style="display: none;">
+            <img src=" /images/illustration-thank-you.svg" width="168"></img>
+            <div class="back--text-result">
+                <p>
+                    You selected <span class="back--insertResult"><!-- Add rating here --></span> out of 5
+                </p>
+            </div>
+            <div class="back--box-texts">
+                <h1>Thank you!</h1>
+                <p>We appreciate you taking the time to give a rating. If you ever need more support,
+                    don't hesitate to get in touch!</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
