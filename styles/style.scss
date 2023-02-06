@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    --bgcolor: hsl(216, 12%, 8%);
+    --cardcolor: linear-gradient(40deg, #1e252f, #171e28);
+    --white: hsl(0, 0%, 100%);
+    --orange: hsl(25, 97%, 53%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+
+    --transition: 0.4s ease-in-out all
+}
+
+body {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bgcolor);
+    font-family: Overpass, sans;
+}
+
+h1 {
+    color: var(--white);
+}
+
+p {
+    color: var(--light-grey);
+}
+
+
+button {
+    background: orange;
+    outline: none;
+    border: 0;
+    color: var(--white);
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 25px;
+    font-weight: 700;
+
+
+    &:hover {
+        background: var(--white);
+        color: var(--orange);
+    }
+
+    &:disabled {
+        background: silver;
+        color: silver;
+    }
+}
+
+button:disabled,
+button[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.contain {
+    width: 41.5rem;
+    aspect-ratio: 1/1;
+    background: var(--cardcolor);
+    border-radius: 3.5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        color: var(--light-grey);
+        font-size: 1.8rem;
+        background: var(--dark-blue);
+        padding: 1.4rem;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: var(--transition);
+
+        &:hover {
+            background: var(--orange);
+            color: var(--white);
+        }
+    }
+
+    button.active {
+        background: var(--light-grey);
+        color: var(--white);
+    }
+
+}
+
+ion-icon {
+    color: var(--orange);
+    background: var(--dark-blue);
+    border-radius: 50%;
+    font-size: 22px;
+    padding: 1.4rem;
+}
+
+.back {
+    padding: 40px !important;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+
+    &--text-result {
+        background: var(--dark-blue);
+        border-radius: 2rem;
+        padding: 1rem;
+        width: 70%;
+        margin: 0 auto;
+
+        p {
+            color: var(--orange);
+        }
+    }
+}
