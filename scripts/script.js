@@ -1,34 +1,26 @@
-let findButton = document.querySelectorAll(".numbers button");
-let countSpan = document.querySelectorAll(".numbers button");
-let textresult = document.querySelector(".back--insertResult");
-let btnSubmit = document.querySelector(".btnSubmit");
-let MainContain = document.querySelectorAll(".contain");
+const ratingContainer = document.querySelector(".container-rating");
+const thanksContainer = document.querySelector(".container-thanks");
+const btnRating = document.querySelectorAll(".btn");
 
-for (let i = 0; i < findButton.length && countSpan.length; i++) {
-  const buttonsClicked = findButton[i];
-  const spansActive = countSpan[i];
-
-  buttonsClicked.addEventListener("click", () => {
-    var resultClick = buttonsClicked.value;
-    textresult.innerHTML = resultClick;
-    countSpan.forEach((span) => {
-      span.classList.remove("active");
-      btnSubmit.disabled = false;
-    });
-    spansActive.classList.add("active");
-  });
-}
+const btnSubmit = document.querySelector("#btn-submit");
+const ratesResult = document.querySelector("#rating");
 
 btnSubmit.addEventListener("click", () => {
-  for (let i = 0; i < MainContain.length; i++) {
-    const element = MainContain[i];
-    MainContain.forEach((contain) => {
-      if (contain.style.display == "none") {
-        contain.style.display = "flex";
-      } else {
-        contain.style.display = "none";
-      }
-    });
-    element.style.display = "flex";
-  }
+  thanksContainer.style.display = "flex";
+  ratingContainer.classList.add("hidden");
 });
+
+for (let i = 0; i < btnRating.length; i++) {
+  const e = btnRating[i];
+  e.addEventListener("click", () => {
+    btnRating.forEach((element) => {
+      element.classList.remove("selected");
+    });
+
+    e.classList.add("selected");
+    ratesResult.innerHTML = e.innerHTML;
+    if (e.classList.contains("selected")) {
+      btnSubmit.disabled = false;
+    }
+  });
+}

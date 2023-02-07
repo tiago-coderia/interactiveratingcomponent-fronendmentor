@@ -2,53 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive rating component | FrontEndMentor</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <script src="scripts/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- tailwind sumonned -->
+  <link rel="stylesheet" href="dist/output.css" />
+
+  <!-- Overpass Font Import -->
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="scripts/script.js" defer></script>
 </head>
 
-<body>
+<body class="h-screen flex justify-center items-center flex-col">
+  <main>
+    <!-- Rating state start -->
+    <div
+      class="container-rating bg-gradient-to-b from-[#212830] to-[#171e28] w-[415px] h-[418px] p-[33px] text-white flex justify-between flex-col rounded-[38px]">
+      <img src="images/icon-star.svg" alt="Icone de Estrela" width="50" class="bg-DarkBlue p-[15px] rounded-full" />
+      <h1 class="text-5xl font-bold">How did we do?</h1>
+      <p class="text-MediumGrey">
+        Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+      <ul class="flex justify-between">
+        <li><button class="btn">1</button></li>
+        <li><button class="btn">2</button></li>
+        <li><button class="btn">3</button></li>
+        <li><button class="btn">4</button></li>
+        <li><button class="btn">5</button></li>
+      </ul>
+      <button id="btn-submit" disabled
+        class="bg-Orange rounded-full py-4 hover:bg-white hover:text-Orange transition-colors duration-500 uppercase tracking-widest">Submit</button>
+    </div>
+    <!-- Rating state end -->
+    <div
+      class="container-thanks bg-gradient-to-b from-[#212830] to-[#171e28] w-[415px] h-[418px] px-[33px] py-[40px] text-white justify-between items-center flex-col rounded-[38px] hidden">
+      <!-- Thank you state start -->
+      <img src="images/illustration-thank-you.svg" alt="Thanks Icon" width="165">
+      <p class="text-Orange py-3 px-6 rounded-full bg-DarkBlue">You selected <span id="rating"></span> out of 5</p>
 
-    <main class="box-front">
-        <div class="contain front">
-            <ion-icon name="star"></ion-icon>
-            <div class="box--texts">
-                <h1>How did we do?</h1>
-                <p>
-                    Please let us know how we did with your support request. All feedback is appreciated
-                    to help us improve our offering!
-                </p>
-            </div>
-            <div class="numbers">
-                <button value="1">1</button>
-                <button value="2">2</button>
-                <button value="3">3</button>
-                <button value="4">4</button>
-                <button value="5">5</button>
-            </div>
-            <button class="btnSubmit" disabled>SUBMIT</button>
-        </div>
-        <div class="contain back" style="display: none;">
-            <img src="images/illustration-thank-you.svg" width="168" alt="thank you logo"></img>
-            <div class="back--text-result">
-                <p>
-                    You selected <span class="back--insertResult"><!-- Add rating here --></span> out of 5
-                </p>
-            </div>
-            <div class="back--box-texts">
-                <h1>Thank you!</h1>
-                <p>We appreciate you taking the time to give a rating. If you ever need more support,
-                    don't hesitate to get in touch!</p>
-            </div>
-        </div>
-    </main>
+      <div class="thanks text-center">
+        <h1 class="text-5xl font-bold mb-2">Thank you!</h1>
+        <p class="text-MediumGrey">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- Thank you state end -->
+    </div>
+  </main>
+
+  <div class="attribution mt-2">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      Frontend Mentor
+    </a>
+    . Coded by
+    <a href="https://renderiadesign.com.br" target="_blank">Coderia</a>.
+  </div>
 </body>
 
 </html>
