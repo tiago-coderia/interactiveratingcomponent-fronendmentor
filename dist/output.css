@@ -588,6 +588,11 @@ ul li button:hover {
   border-radius: 9999px;
 }
 
+.bg-VeryDarkBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 12% 8% / var(--tw-bg-opacity));
+}
+
 .bg-DarkBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(213 19% 18% / var(--tw-bg-opacity));
